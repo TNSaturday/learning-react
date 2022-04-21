@@ -12,19 +12,18 @@
 <script type="text/babel">
 
     // Arrow Functions gone too far, this means window
-
-    var tahoe = {
+    const tahoe = {
       resorts: ["Kirkwood","Squaw","Alpine","Heavenly","Northstar"],
       print: (delay=1000) => {
 
         setTimeout(() => {
-          console.log(this.resorts.join(","))
-        }, delay)
+          console.log(this.resorts.join(","));
+        }, delay);
 
       }
     }
 
-    tahoe.print()
+    tahoe.print();
 
 </script>
 </body>

@@ -25,16 +25,15 @@
 <script type="text/babel">
 
   // Solution, lexical variable scope
-
-  var div,
-      container = document.getElementById('container')
+  let div,
+      container = document.getElementById('container');
 
   for (let i=0; i<5; i++) {
-    div = document.createElement('div')
+    div = document.createElement('div');
     div.onclick = function() {
-      alert('This is box #' + i)
+      alert('This is box #' + i);
     }
-    container.appendChild(div)
+    container.appendChild(div);
   }
 
 </script>

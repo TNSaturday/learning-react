@@ -12,21 +12,20 @@
 <script type="text/babel">
 
     // Arrow Function
-
-    var lordify = (firstName, land) => {
+    const lordify = (firstName, land) => {
 
       if (!firstName) {
-        throw new Error('A firstName is required to lordify')
+        throw new Error('A firstName is required to lordify');
       }
 
       if (!land) {
-        throw new Error('A lord must have a land')
+        throw new Error('A lord must have a land');
       }
 
-      return `${firstName} of ${land}`
+      return `${firstName} of ${land}`;
     }
 
-    console.log( lordify() )
+    console.log( lordify() );
 
 </script>
 </body>

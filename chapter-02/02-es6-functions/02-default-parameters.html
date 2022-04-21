@@ -11,19 +11,19 @@
 <p>Open the console</p>
 <script type="text/babel">
 
-    var defaultPerson = {
+    const defaultPerson = {
       name: {
         first: "Shane",
         last: "McConkey"
       },
       favActivity: "skiing"
-    }
+    };
 
     function logActivity(p=defaultPerson) {
-      console.log(`${p.name.first} loves ${p.favActivity}`)
+      console.log(`${p.name.first} loves ${p.favActivity}`);
     }
 
-    logActivity()
+    logActivity();
 
 </script>
 </body>

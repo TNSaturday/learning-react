@@ -12,17 +12,16 @@
 <script type="text/babel">
 
     // Function with object arguments
+    const lordify = regularPerson => {
+        console.log(`${regularPerson.firstName} of Canterbury`)
+    };
 
-    var lordify = regularPerson => {
-    console.log(`${regularPerson.firstname} of Canterbury`)
-    }
+    const regularPerson = {
+        firstName: "Bill",
+        lastName: "Wilson"
+    };
 
-    var regularPerson = {
-    firstname: "Bill",
-    lastname: "Wilson"
-    }
-
-    lordify(regularPerson)
+    lordify(regularPerson);
     
 </script>
 </body>

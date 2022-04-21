@@ -12,19 +12,18 @@
 <script type="text/babel">
 
     // Function
-
-    var tahoe = {
-      resorts: ["Kirkwood","Squaw","Alpine","Heavenly","Northstar"],
+    const tahoe = {
+      resorts: ["Kirkwood", "Squaw", "Alpine", "Heavenly", "Northstar"],
       print: function(delay=1000) {
 
         setTimeout(function() {
-          console.log(this.resorts.join(","))
-        }, delay)
+          console.log(this.resorts.join(","));
+        }, delay);
 
       }
     }
 
-    tahoe.print()
+    tahoe.print();
 
 </script>
 </body>

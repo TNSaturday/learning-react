@@ -11,21 +11,20 @@
 <p>Open the console</p>
 <script type="text/babel">
 
-    // Arrow Function 
-
-    var tahoe = {
+    // Arrow Function
+    const tahoe = {
       resorts: ["Kirkwood","Squaw","Alpine","Heavenly","Northstar"],
       print: function(delay=1000) {
 
         setTimeout(
           () => console.log(this.resorts.join(",")),
           delay
-        )
+        );
 
       }
     }
 
-    tahoe.print()
+    tahoe.print();
 
 </script>
 </body>
