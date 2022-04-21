@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta
+        name="viewport"
+        content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta charset="utf-8" />
+    <title>Imperative DOM Manipulation</title>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<div id="target">
+
+</div>
+<script type="text/babel">
+    // An example of imperative DOM manipulation
+    const target = document.getElementById("target");
+    const wrapper = document.createElement("div");
+    const headline = document.createElement("h1");
+
+    wrapper.id = "welcome";
+    headline.innerText = "Hello World";
+
+    wrapper.appendChild(headline);
+    target.appendChild(wrapper);
+</script>
+</body>
+</html>
