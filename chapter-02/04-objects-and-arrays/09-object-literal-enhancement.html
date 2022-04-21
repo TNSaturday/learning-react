@@ -12,26 +12,25 @@
 <script type="text/babel">
 
     // Object literal enhancements
-
-    var name = "Julia Mancuso"
-    var sound = "go fast"
+    const name = "Julia Mancuso"
+    const sound = "go fast"
 
     const skier = {
       name,
       sound,
       powderYell() {
-        let yell = this.sound.toUpperCase()
-        console.log(`${yell} ${yell} ${yell}!!!`)
+        let yell = this.sound.toUpperCase();
+        console.log(`${yell} ${yell} ${yell}!!!`);
       },
       speed(mph) {
-        this.speed = mph
-        console.log('speed:', mph)
+        this.speed = mph;
+        console.log('speed:', mph);
       }
     }
 
-    skier.powderYell()
-    skier.speed(350)
-    console.log(JSON.stringify(skier))
+    skier.powderYell();
+    skier.speed(350);
+    console.log(JSON.stringify(skier));
 
 </script>
 </body>

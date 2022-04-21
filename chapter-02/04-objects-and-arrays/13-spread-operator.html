@@ -12,12 +12,11 @@
 <script type="text/babel">
 
     // Destructuring with the spread operator
+    const lakes = ["Donner", "Marlette", "Fallen Leaf", "Cascade"];
 
-    var lakes = ["Donner", "Marlette", "Fallen Leaf", "Cascade"]
+    const [first, ...rest] = lakes;
 
-    var [first, ...rest] = lakes
-
-    console.log(rest.join(", "))
+    console.log(rest.join(", "));
 
 </script>
 </body>

@@ -12,26 +12,25 @@
 <script type="text/babel">
 
     // Object literals... the old way
+    const name = "Léo Taillefer";
+    const sound = "Kahh";
 
-    var name = "Léo Taillefer"
-    var sound = "Kahh"
-
-    var skier = {
+    const skier = {
       name: name,
       sound: sound,
       powderYell: function() {
-      var yell = this.sound.toUpperCase()
-      console.log(`${yell} ${yell} ${yell}!!!`)
+        const yell = this.sound.toUpperCase()
+        console.log(`${yell} ${yell} ${yell}!!!`);
     },
       speed: function(mph) {
-        this.speed = mph
-        console.log('speed:', mph)
+        this.speed = mph;
+        console.log('speed:', mph);
       }
     }
 
-    skier.powderYell()
-    skier.speed("hair on fire")
-    console.log(JSON.stringify(skier))
+    skier.powderYell();
+    skier.speed("hair on fire");
+    console.log(JSON.stringify(skier));
 
 </script>
 </body>

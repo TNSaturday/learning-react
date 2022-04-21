@@ -12,19 +12,18 @@
 <script type="text/babel">
 
     // Convert arguments to an array with the spread operator
-    //    pick an array apart with spreads
-
+    // pick an array apart with spreads
     function directions(...args) {
-      var [start, ...remaining] = args
-      var [finish, ...stops] = remaining.reverse()
+      const [start, ...remaining] = args;
+      const [finish, ...stops] = remaining.reverse();
 
-      console.log(`drive through ${args.length} towns`)
-      console.log(`start in ${start}`)
-      console.log(`the destination is ${finish}`)
-      console.log(`stopping ${stops.length} times in between`)
+      console.log(`drive through ${args.length} towns`);
+      console.log(`start in ${start}`);
+      console.log(`the destination is ${finish}`);
+      console.log(`stopping ${stops.length} times in between`);
     }
 
-    directions("Truckee", "Tahoe City", "Sunnyside", "Homewood", "Tahoma")
+    directions("Truckee", "Tahoe City", "Sunnyside", "Homewood", "Tahoma");
 
 </script>
 </body>

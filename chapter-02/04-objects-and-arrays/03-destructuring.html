@@ -12,16 +12,16 @@
 <script type="text/babel">
 
     // Destructuring object arguments
+    const lordify = ({ firstName, land }) =>
+      console.log(`${firstName} of ${land}`);
 
-    var lordify = ({firstname}) =>
-      console.log(`${firstname} of canterbury`)
+    const regularPerson = {
+        firstName: "Dale",
+        lastName: "Smith",
+        land: "Canterbury"
+    };
 
-    var regularPerson = {
-      firstname: "Dale",
-      lastname: "Smith"
-    }
-
-    lordify(regularPerson)
+    lordify(regularPerson);
 
 </script>
 </body>

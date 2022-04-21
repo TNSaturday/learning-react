@@ -12,12 +12,11 @@
 <script type="text/babel">
 
     // duplicate peaks with spread and revers the duplicate
+    const peaks = ["Tallac", "Ralston", "Rose"];
+    const [last] = [...peaks].reverse();
 
-    var peaks = ["Tallac", "Ralston", "Rose"]
-    var [last] = [...peaks].reverse()
-
-    console.log(last) // Rose
-    console.log(peaks.join(', '))
+    console.log(last); // Rose
+    console.log(peaks.join(', '));
 
 </script>
 </body>
