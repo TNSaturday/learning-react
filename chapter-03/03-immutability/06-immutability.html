@@ -19,14 +19,11 @@
         { title: "Party Pink" }
       ];
 
+      // Even Better, ...spread operator
       const addColor = (title, list) => [
         ...list,
         { title }
       ];
-
-      //
-      // Even Better, ...spread operator
-      //
 
       console.log(addColor("Glam Green", list).length);
       console.log(list.length);

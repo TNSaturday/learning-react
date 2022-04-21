@@ -13,20 +13,17 @@
     <h1>Immutability</h1>
     <p>Open the console</p>
     <script type="text/babel">
-      let list = [
+      const list = [
         { title: "Rad Red" },
         { title: "Lawn" },
         { title: "Party Pink" }
       ];
 
-      var addColor = function(title, colors) {
+      // Add Color is mutating the original list
+      const addColor = function(title, colors) {
         colors.push({ title: title });
         return colors;
       };
-
-      //
-      // Add Color is mutating the original list
-      //
 
       console.log(addColor("Glam Green", list).length);
       console.log(list.length);

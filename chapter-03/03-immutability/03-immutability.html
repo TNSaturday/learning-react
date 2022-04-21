@@ -13,20 +13,17 @@
     <h1>Immutability</h1>
     <p>Open the console</p>
     <script type="text/babel">
-      let color_lawn = {
+      const color_lawn = {
         title: "lawn",
         color: "#00FF00",
         rating: 0
       };
 
+      // Or the ...spread operator, even better
       const rateColor = (color, rating) => ({
         ...color,
         rating
       });
-
-      //
-      // Or the ...spread operator, even better
-      //
 
       console.log(rateColor(color_lawn, 5).rating);
       console.log(color_lawn.rating);

@@ -13,18 +13,15 @@
     <h1>Immutability</h1>
     <p>Open the console</p>
     <script type="text/babel">
-      let list = [
+      const list = [
         { title: "Rad Red" },
         { title: "Lawn" },
         { title: "Party Pink" }
       ];
 
+      // Use array.concat instead, it does not mutate the list
       const addColor = (title, array) =>
         array.concat({ title });
-
-      //
-      // Use array.concat instead, it does not mutate the list
-      //
 
       console.log(addColor("Glam Green", list).length);
       console.log(list.length);
