@@ -13,11 +13,11 @@
     <h1>Imperative vs. Declarative</h1>
     <p>Open the console</p>
     <script type="text/babel">
-      var string =
+      const string =
         "This is the mid day show with Cheryl Waters";
-      var urlFriendly = "";
+      let urlFriendly = "";
 
-      for (var i = 0; i < string.length; i++) {
+      for (let i = 0; i < string.length; i++) {
         if (string[i] === " ") {
           urlFriendly += "-";
         } else {
