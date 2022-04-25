@@ -12,22 +12,21 @@
 <script type="text/babel">
 
     // Destructuring Assignment
-    const sandwich =  {
-      bread: "dutch crunch",
-      meat: "tuna",
-      cheese: "swiss",
-      toppings: ["lettuce", "tomato", "mustard"]
+    const tour = {
+        from: "Antalya",
+        to: "Pamukkale",
+        costPrice: 30,
+        price: 50,
+        sights: [
+            'Karahait',
+            'Pamukkale',
+            'Salda'
+        ],
     };
 
-    let { bread, meat } = sandwich;
+    let {from, to, price} = tour;
 
-    console.log(`Destructured variables: ${bread}, ${meat}`);
-
-    bread = "garlic";
-    meat = "turkey";
-
-    console.log(`Destructured variables after reassignment: ${bread}, ${meat}`);
-    console.log(`Original object stays the same: ${sandwich.bread}, ${sandwich.meat}`);
+    console.log(from, to, price);
 
 </script>
 </body>

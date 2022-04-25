@@ -13,19 +13,27 @@
     <h1>Immutability</h1>
     <p>Open the console</p>
     <script type="text/babel">
-      const color_lawn = {
-        title: "lawn",
-        color: "#00FF00",
-        rating: 0
+      const ourTour = {
+        from: "Antalya",
+        to: "Pamukkale",
+        costPrice: 30,
+        date: 'May 1',
+        price: 50,
+        sights: [
+          'Karahait',
+          'Pamukkale',
+          'Salda'
+        ],
       };
 
-      // Using Object.assign to create a copy and rate that
-      const rateColor = function(color, rating) {
-        return Object.assign({}, color, { rating: rating });
-      };
+      const rateTour = (tour, rating) => ({
+        ...tour,
+        rating
+      });
 
-      console.log(rateColor(color_lawn, 5).rating);
-      console.log(color_lawn.rating);
+
+      console.log(rateTour(ourTour, 5));
+      console.log(ourTour);
     </script>
   </body>
 </html>

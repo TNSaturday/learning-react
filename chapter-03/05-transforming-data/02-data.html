@@ -11,15 +11,16 @@
 <p>Open the Console</p>
 <script type="text/babel">
 
-    const schools = [
-      "Yorktown",
-      "Washington & Lee",
-      "Wakefield"
-    ]
+    const tours = [
+        { to: "Pamukkale", price: 50 },
+        { to: "Cappadocia", price: 70 },
+        { to: "Dalyan", price: 30 },
+        { to: "Kemer Hamam", price: 20 },
+    ];
 
-    const wSchools = schools.filter(school => school[0] === "W")
+    const cheapTours = tours.filter(tour =>  tour.price < 50);
 
-    console.log( wSchools )
+    console.log(cheapTours);
 
 </script>
 </body>

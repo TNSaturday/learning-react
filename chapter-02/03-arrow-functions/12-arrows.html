@@ -11,21 +11,22 @@
 <p>Open the console</p>
 <script type="text/babel">
 
-    // If we want ro return an object from the arrow function, it must be enclosed in round brackets
-    const person = (firstName, lastName) => ({
-        first: firstName,
-        last: lastName
-    });
-    console.log(person("Flad", "Hanson"));
+   const createTour = (from, to, price, activities) => ({
+       from,
+       to,
+       price,
+       activities
+   });
 
-    // Or use explicit return statement
-    const anotherPerson = (firstName, lastName) => {
-        return {
-            first: firstName,
-            last: lastName
-        }
-    };
-    console.log(anotherPerson("Brad", "Castleberry"));
+   const cappa23 = createTour('Beldibi', 'Cappadocia', 70, [
+       'Balloons',
+       'Jeep Safari',
+       'Underground City',
+       'Old Castle',
+       'Konya City'
+   ]);
+
+   console.log(cappa23);
 
 </script>
 </body>

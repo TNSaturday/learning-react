@@ -10,16 +10,29 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   </head>
   <body>
-    <h1>Transforming Data</h1>
-    <p>Open the Console</p>
+    <header>
+      <h1>Transforming Data</h1>
+    </header>
+    <main id="target">
+    </main>
     <script type="text/babel">
-      const schools = [
-        "Yorktown",
-        "Washington & Lee",
-        "Wakefield"
+      const header = text => {
+        let h3 = document.createElement("h3");
+        h3.innerText = text;
+        return h3;
+      };
+
+      const konyaCities = [
+        "Nevsehir",
+        "Konya",
+        "Urgup"
       ];
 
-      console.log(schools.join(", "));
+      let [firstCity] = konyaCities;
+
+      document.getElementById("target").appendChild(header(firstCity));
+
+      console.log(konyaCities.join(", "));
     </script>
   </body>
 </html>

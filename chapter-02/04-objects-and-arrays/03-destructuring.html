@@ -12,17 +12,23 @@
 <script type="text/babel">
 
     // Destructuring object arguments
-    const lordify = ({ firstName, land }) =>
-      console.log(`${firstName} of ${land}`);
+    const announceTour = ({ from, to, date, price }) =>
+      console.log(`Our tour from ${from} to ${to} on ${date} is just $${price}!!!`);
 
-    const regularPerson = {
-        firstName: "Dale",
-        lastName: "Smith",
-        land: "Canterbury"
+    const ourTour = {
+        from: "Antalya",
+        to: "Pamukkale",
+        costPrice: 30,
+        date: 'May 1',
+        price: 50,
+        sights: [
+            'Karahait',
+            'Pamukkale',
+            'Salda'
+        ],
     };
 
-    lordify(regularPerson);
-
+    announceTour(ourTour);
 </script>
 </body>
 </html>
