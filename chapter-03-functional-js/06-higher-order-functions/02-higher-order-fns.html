@@ -21,19 +21,18 @@
             reject(Error(request.statusText))
       request.onerror = (err) => rejects(err)
       request.send()
-    })
+    });
 
     const userLogs = userName => message =>
-        console.log(`${userName} -> ${message}`)
+        console.log(`${userName} -> ${message}`);
 
-    const log = userLogs("grandpa23")
+    const log = userLogs("grandpa23");
 
-    log("attempted to load 20 fake members")
+    log("attempted to load 20 fake members");
     getFakeMembers(20).then(
         members => log(`successfully loaded ${members.length} members`),
         error => log("encountered an error loading members")
-    )
-
+    );
 
 </script>
 </body>

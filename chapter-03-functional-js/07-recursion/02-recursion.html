@@ -15,11 +15,11 @@
         fn(value)
         return (value > 0) ?
             setTimeout(() => countdown(value-1, fn), delay) :
-            value
-    }
+            value;
+    };
 
-    const log = value => console.log(value)
-    countdown(10, log)
+    const log = value => console.log(value);
+    countdown(10, log);
 
 </script>
 </body>
