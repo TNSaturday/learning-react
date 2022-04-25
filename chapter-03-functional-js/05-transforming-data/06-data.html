@@ -16,7 +16,7 @@
         { name: "Stratford" },
         { name: "Washington & Lee"},
         { name: "Wakefield"}
-    ]
+    ];
 
     const editName = (oldName, name, arr) =>
         arr.map(item => {
@@ -24,16 +24,16 @@
                 return {
                     ...item,
                     name
-                }
+                };
             } else {
-                return item
+                return item;
             }
-        })
+        });
 
-    let updatedSchools = editName("Stratford", "HB Woodlawn", schools)
+    let updatedSchools = editName("Stratford", "HB Woodlawn", schools);
 
-    console.log( updatedSchools[1] )
-    console.log( schools[1] )
+    console.log( updatedSchools[1] );
+    console.log( schools[1] );
 
 </script>
 </body>
