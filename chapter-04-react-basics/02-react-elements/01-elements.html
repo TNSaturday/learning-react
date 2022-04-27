@@ -15,14 +15,25 @@
 
 <script>
 
-    const tour = React.createElement("h1", null, "Памуккале");
+    const tourElement = React.createElement("h1", { id: "tour-1" }, "Памуккале");
+    const sights = ['Иераполис', 'Карахаит', 'Травертиновые террасы', 'Салда'];
+    const included = ['Обед', 'Термальные исчтоники при отеле'];
+    const priceAdult = 50;
+    const priceKid = 30;
+
+    const tourObject = {
+      sights,
+      included,
+      priceAdult,
+      priceKid
+    };
 
     ReactDOM.render(
-        tour,
+        tourElement,
         document.getElementById('react-container')
     );
 
-    console.log('Тур', tour);
+    console.log(tourObject);
 
 </script>
 
