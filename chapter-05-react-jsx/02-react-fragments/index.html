@@ -37,27 +37,37 @@
         }
 
         const Sights = ({ sights }) => {
-            return sights.map((sight, i) => (
-                <li key={i}>{sight}</li>
-            ))
+            return (
+                <>
+                    <h3>Sights to visit:</h3>
+                    <ul>
+                        {sights.map((sight, i) => (
+                            <li key={i}>{sight}</li>
+                        ))}
+                    </ul>
+                </>
+            )
+        }
+
+        const Price = ({price}) => {
+            return <p><b>Price</b>: ${price}</p>;
         }
 
         const Tour = ({ destination, sights, price }) => {
             return (
                 <>
                     <Header destination={destination} />
-                    <h3>Sights to visit:</h3>
                     <Sights sights={sights}/>
-                    <p><b>Price</b>: ${price}</p>
+                    <Price price={price}/>
                 </>
             )
         }
 
-        const Tours = ({tours}) => {
-            return tours.map((tour, i) => <Tour key={i} {...tour}/>)
+        const ToursList = ({tours}) => {
+            return tours.map((tour, i) => <Tour key={i} {...tour}/>);
         }
 
-        ReactDOM.render(<Tours tours={data}/>, container);
+        ReactDOM.render(<ToursList tours={data}/>, container);
     </script>
 </body>
 </html>
