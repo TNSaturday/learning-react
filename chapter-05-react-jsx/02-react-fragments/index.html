@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React Fragments</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script
+            src="https://unpkg.com/react@16.8.6/umd/react.development.js">
+    </script>
+    <script
+            src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js">
+    </script>
+    <script
+            src="https://unpkg.com/@babel/standalone/babel.min.js">
+    </script>
+
+    <script type="text/babel">
+        const container = document.getElementById("root");
+        const data = [
+            {
+                destination: "Pamukkale",
+                sights: ['Ierapolis', 'Karahait', 'Salda'],
+                price: 50
+            },
+            {
+                destination: "Cappadocia",
+                sights: ['Baloons', 'Jeep Safari', 'Konya'],
+                price: 75
+            },
+        ]
+
+        const Header = ({ destination }) => {
+            return <h1>A tour to {destination}</h1>
+        }
+
+        const Sights = ({ sights }) => {
+            return sights.map((sight, i) => (
+                <li key={i}>{sight}</li>
+            ))
+        }
+
+        const Tour = ({ destination, sights, price }) => {
+            return (
+                <>
+                    <Header destination={destination} />
+                    <h3>Sights to visit:</h3>
+                    <Sights sights={sights}/>
+                    <p><b>Price</b>: ${price}</p>
+                </>
+            )
+        }
+
+        const Tours = ({tours}) => {
+            return tours.map((tour, i) => <Tour key={i} {...tour}/>)
+        }
+
+        ReactDOM.render(<Tours tours={data}/>, container);
+    </script>
+</body>
+</html>
