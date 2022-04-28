@@ -24,10 +24,11 @@
         ],
     };
 
-    let {from, to, price} = tour;
-
-    console.log(from, to, price);
-
+    const logTour = ({from, to, price}) => {
+        console.log(`A tour from ${from} to ${to} is $${price}`);
+    }
+    console.log(tour);
+    // logTour(tour);
 </script>
 </body>
 </html>
