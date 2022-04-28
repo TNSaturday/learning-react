@@ -14,26 +14,27 @@
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
 <script>
+    
+    const sights = ['Иераполис', 'Карахаит', 'Травертиновые террасы', 'Озеро Салда'];
 
-    const tourElement = React.createElement("h1", { id: "tour-1" }, "Памуккале");
-    const sights = ['Иераполис', 'Карахаит', 'Травертиновые террасы', 'Салда'];
-    const included = ['Обед', 'Термальные исчтоники при отеле'];
-    const priceAdult = 50;
-    const priceKid = 30;
+    const Header = () => {
+        return React.createElement("h1", { id: "pamukkale" }, "Памуккале");
+    }
 
-    const tourObject = {
-      sights,
-      included,
-      priceAdult,
-      priceKid
-    };
+    const SightsList = ({ items }) => {
+        return React.createElement(
+            "ul",
+            { className: "sights" },
+            items.map((sight, i) =>
+                React.createElement("li", { key: i }, sight)
+            )
+        );
+    }
 
     ReactDOM.render(
-        tourElement,
+        React.createElement(SightsList, { items: sights }, null),
         document.getElementById('react-container')
     );
-
-    console.log(tourObject);
 
 </script>
 
