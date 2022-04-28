@@ -1,6 +1,14 @@
 import React from "react";
 import { render } from "react-dom";
-import Header from "./components/Header";
+import data from "../data/tours.json";
+
+import Tour from "./components/Tour";
 
 const container = document.getElementById("root");
-render(<Header destination={"Pamukkale"}/>, container);
+
+function ToursList ({tours}) {
+    return tours.map((tour, i) => <Tour key={i} {...tour}/>);
+}
+
+
+render(<ToursList tours={data} />, container);

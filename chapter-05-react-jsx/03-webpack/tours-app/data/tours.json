@@ -1,0 +1,12 @@
+[
+  {
+    "destination": "Pamukkale",
+    "sights": ["Ierapolis", "Karahait", "Salda"],
+    "price": 50
+  },
+  {
+    "destination": "Cappadocia",
+    "sights": ["Baloons", "Jeep Safari", "Konya"],
+    "price": 75
+  }
+]
