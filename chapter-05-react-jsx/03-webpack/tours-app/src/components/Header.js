@@ -1,5 +1,5 @@
 import React from "react";
 
-export default  Header = ({ destination }) => {
+export default function Header ({ destination }) {
     return <h1>A tour to {destination}</h1>
 }
