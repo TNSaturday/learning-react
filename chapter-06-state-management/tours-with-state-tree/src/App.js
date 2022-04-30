@@ -9,10 +9,18 @@ function App() {
       setTours(newTours);
   }
 
+  const onRateTour = ((id, rating) => {
+      const newTours = tours.map(tour =>
+        tour.id === id ? {...tour, rating} : tour
+      );
+      setTours(newTours);
+  })
+
   return (
     <ToursList
         tours={tours}
         onRemoveTour={id => onRemoveTour(id)}
+        onRateTour={(id, rating) => onRateTour(id, rating)}
     />
   );
 }

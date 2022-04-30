@@ -8,7 +8,8 @@ export default function Tour({
     sights,
     price,
     rating,
-    onRemove = f => f
+    onRemove = f => f,
+    onRate = f => f,
 }) {
     return (
         <section>
@@ -24,7 +25,10 @@ export default function Tour({
                 }
             </ul>
             <p><b>Price: ${price}</b></p>
-            <StarRating totalStars={5} rating={rating} />
+            <StarRating
+                totalStars={5}
+                rating={rating}
+                onRate={rating => onRate(id, rating)} />
         </section>
     )
 }
