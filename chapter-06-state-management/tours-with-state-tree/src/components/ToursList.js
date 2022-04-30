@@ -10,9 +10,10 @@ export default function ToursList({
         <div>
             <h1>Tours</h1>
             {
-                tours.map((tour, i) =>
+                tours.map(tour =>
                 <Tour
-                    key={i} {...tour}
+                    key={tour.id}
+                    {...tour}
                     onRemove={onRemoveTour}
                     onRate={onRateTour}
                 />)

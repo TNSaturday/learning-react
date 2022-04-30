@@ -20,8 +20,8 @@ export default function Tour({
             <h3>Sights to visit:</h3>
             <ul>
                 {
-                    sights.map((sight) =>
-                    <li key={id}>{sight}</li>)
+                    sights.map((sight, i) =>
+                    <li key={i}>{sight}</li>)
                 }
             </ul>
             <p><b>Price: ${price}</b></p>
