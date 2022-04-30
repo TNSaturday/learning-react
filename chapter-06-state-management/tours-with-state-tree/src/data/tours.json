@@ -1,14 +1,14 @@
 [
   {
     "title": "Pamukkale",
-    "id": 0,
+    "id": "056b1653-342e-490d-8e87-8bbd5289abdf",
     "sights": ["Ierapolis", "Karahait", "Salda"],
     "price": 50,
     "rating": 4
   },
   {
     "title": "Cappadocia",
-    "id": 1,
+    "id": "0e64b39b-0484-4395-82a3-33e3c08a929c",
     "sights": ["Baloons", "Jeep Safari", "Konya"],
     "price": 75,
     "rating": 5

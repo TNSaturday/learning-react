@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import toursData from "./data/tours.json";
 import ToursList from "./components/ToursList";
 import AddTourForm from "./components/AddTourForm";
+import { v4 } from "uuid";
 
 function App() {
     const [tours, setTours] = useState(toursData);
@@ -17,7 +18,7 @@ function App() {
     })
 
     const onNewTour = (tour => {
-        const id = tours.length;
+        const id = v4();
         const newTours = [...tours, {...tour, id}];
         setTours(newTours);
     });
