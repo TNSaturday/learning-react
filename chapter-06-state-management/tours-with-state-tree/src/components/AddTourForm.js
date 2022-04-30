@@ -1,29 +1,47 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
 export default function AddTourForm({ onNewTour = f => f}) {
-    const tourTitle = useRef();
-    const tourSights = useRef();
-    const tourPrice = useRef();
+    const [title, setTitle] = useState("");
+    const [sights, setSights] = useState("");
+    const [price, setPrice] = useState(0);
 
     const submit = e => {
         e.preventDefault();
         const tour = {
-            title: tourTitle.current.value,
-            sights: tourSights.current.value.split(','),
-            price: tourPrice.current.value,
+            title,
+            sights: sights.split(','),
+            price
         };
         onNewTour(tour);
-        tourTitle.current.value = "";
-        tourSights.current.value = "";
-        tourPrice.current.value = "";
+        setTitle("");
+        setSights("")
+        setPrice(0);
     };
 
     return (
         <form onSubmit={submit}>
-            <input ref={tourTitle} type="text" placeholder="Tour Title" required/>
-            <input ref={tourSights} type="text" placeholder="Sights to Visit" required/>
-            <input ref={tourPrice} type="text" placeholder="Tour Price" required/>
-            <button>Add</button>
+            <input
+                value={title}
+                onChange={event => setTitle(event.target.value)}
+                type="text"
+                placeholder="Tour Title"
+                required
+            />
+            <input
+                value={sights}
+                onChange={event => setSights(event.target.value)}
+                type="text"
+                placeholder="Sights to Visit"
+                required
+            />
+            <input
+                value={price}
+                onChange={event => setPrice(event.target.value)}
+                type="text"
+                placeholder="Tour Price"
+                required
+            />
+            <button>Add Tour</button>
         </form>
     );
 }
