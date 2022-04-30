@@ -1,42 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
+import { useInput } from "../hooks/useInput";
 
 export default function AddTourForm({ onNewTour = f => f}) {
-    const [title, setTitle] = useState("");
-    const [sights, setSights] = useState("");
-    const [price, setPrice] = useState(0);
+    const [titleProps, resetTitle] = useInput("");
+    const [sightsProps, resetSights] = useInput("");
+    const [priceProps, resetPrice] = useInput(0);
 
     const submit = e => {
         e.preventDefault();
         const tour = {
-            title,
-            sights: sights.split(','),
-            price
+            title: titleProps.value,
+            sights: sightsProps.value.split(','),
+            price: priceProps.value,
         };
         onNewTour(tour);
-        setTitle("");
-        setSights("")
-        setPrice(0);
+        resetTitle();
+        resetSights();
+        resetPrice();
     };
 
     return (
         <form onSubmit={submit}>
             <input
-                value={title}
-                onChange={event => setTitle(event.target.value)}
+                {...titleProps}
                 type="text"
                 placeholder="Tour Title"
                 required
             />
             <input
-                value={sights}
-                onChange={event => setSights(event.target.value)}
+                {...sightsProps}
                 type="text"
                 placeholder="Sights to Visit"
                 required
             />
             <input
-                value={price}
-                onChange={event => setPrice(event.target.value)}
+                {...priceProps}
                 type="text"
                 placeholder="Tour Price"
                 required
