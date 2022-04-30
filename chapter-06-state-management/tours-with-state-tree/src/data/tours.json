@@ -1,0 +1,16 @@
+[
+  {
+    "destination": "Pamukkale",
+    "id": 0,
+    "sights": ["Ierapolis", "Karahait", "Salda"],
+    "price": 50,
+    "rating": 4
+  },
+  {
+    "destination": "Cappadocia",
+    "id": 1,
+    "sights": ["Baloons", "Jeep Safari", "Konya"],
+    "price": 75,
+    "rating": 5
+  }
+]
