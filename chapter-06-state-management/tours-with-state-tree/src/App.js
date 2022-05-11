@@ -28,7 +28,6 @@ function App() {
     return (
         <main>
             <ToursList
-                tours={tours}
                 onRemoveTour={id => onRemoveTour(id)}
                 onRateTour={(id, rating) => onRateTour(id, rating)}
             />

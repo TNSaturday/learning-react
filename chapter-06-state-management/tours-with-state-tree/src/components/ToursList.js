@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Tour from "./Tour";
+import { TourContext } from "../index";
 
-export default function ToursList({
-    tours,
-    onRemoveTour = f => f,
-    onRateTour = f => f
-}) {
+export default function ToursList({ onRemoveTour = f => f, onRateTour = f => f }) {
+    const tours = useContext(TourContext);
     return (
         <div>
             <h1>Tours</h1>

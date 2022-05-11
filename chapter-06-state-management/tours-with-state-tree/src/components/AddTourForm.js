@@ -4,7 +4,7 @@ import { useInput } from "../hooks/useInput";
 export default function AddTourForm({ onNewTour = f => f}) {
     const [titleProps, resetTitle] = useInput("");
     const [sightsProps, resetSights] = useInput("");
-    const [priceProps, resetPrice] = useInput(0);
+    const [priceProps, resetPrice] = useInput("");
 
     const submit = e => {
         e.preventDefault();
