@@ -6,10 +6,12 @@ import { v4 } from "uuid";
 
 function App() {
     const [tours, setTours] = useState(toursData);
+
     const onRemoveTour = (id) => {
         const newTours = tours.filter(tour => tour.id !== id);
         setTours(newTours);
     }
+
     const onRateTour = ((id, rating) => {
         const newTours = tours.map(tour =>
             tour.id === id ? {...tour, rating} : tour
@@ -35,7 +37,6 @@ function App() {
                 onNewTour={tour => onNewTour(tour)}
             />
         </main>
-
     );
 }
 
