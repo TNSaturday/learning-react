@@ -1,7 +1,9 @@
 import React from "react";
 import { useInput } from "../hooks/useInput";
+import { useTours } from "../providers/TourProvider";
 
-export default function AddTourForm({ onNewTour = f => f}) {
+export default function AddTourForm() {
+    const { addTour } = useTours();
     const [titleProps, resetTitle] = useInput("");
     const [sightsProps, resetSights] = useInput("");
     const [priceProps, resetPrice] = useInput("");
@@ -13,7 +15,7 @@ export default function AddTourForm({ onNewTour = f => f}) {
             sights: sightsProps.value.split(','),
             price: priceProps.value,
         };
-        onNewTour(tour);
+        addTour(tour);
         resetTitle();
         resetSights();
         resetPrice();

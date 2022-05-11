@@ -1,20 +1,14 @@
 import React from "react";
 import StarRating from "./StarRating";
 import { FaTrash } from "react-icons/fa";
+import { useTours } from "../providers/TourProvider";
 
-export default function Tour({
-    title,
-    id,
-    sights,
-    price,
-    rating,
-    onRemove = f => f,
-    onRate = f => f,
-}) {
+export default function Tour({ title, id, sights, price, rating }) {
+    const { rateTour, removeTour } = useTours();
     return (
         <section>
             <h1>{title}</h1>
-            <button onClick={() => onRemove(id)}>
+            <button onClick={() => removeTour(id)}>
                 <FaTrash />
             </button>
             <h3>Sights to visit:</h3>
@@ -28,7 +22,7 @@ export default function Tour({
             <StarRating
                 totalStars={5}
                 rating={rating}
-                onRate={rating => onRate(id, rating)} />
+                onRate={rating => rateTour(id, rating)} />
         </section>
     )
 }
