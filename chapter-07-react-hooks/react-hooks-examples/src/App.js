@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useState} from "react";
 import "./style.css";
 import ToursList from "./components/ToursList";
 import {PureCat} from "./components/Cat";
