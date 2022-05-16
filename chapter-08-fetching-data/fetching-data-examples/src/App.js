@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import User from "./components/User";
 import UserForm from "./components/UserForm";
-import BigUserList from "./components/BigUserList";
+import {PureList} from "./components/BigUserList";
 
 function App() {
     const [user, setUser] = useState(null);
@@ -27,7 +27,7 @@ function App() {
             <h1>Show Github User!</h1>
             <UserForm userName={userName} setUserName={setUserName} submitForm={submitForm} />
             <User user={user} error={error}/>
-            <BigUserList />
+            <PureList />
         </main>
     );
 }
